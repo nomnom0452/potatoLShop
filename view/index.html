@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PotatoLshop - Home</title>
+</head>
+<body>
+    <div id="login">
+        <a href="/login">Login</a>
+    </div>
+    <div id="register">
+        <a href="/register">register</a>
+    </div>
+
+    <h1>Home</h1>
+
+    {{range .}}
+    <a href="/product?id={{.Id}}">
+        <ul>
+            <li>Name     : {{.Name}}</li>
+            <li>Quantity : {{.Qty}}</li>
+            <li>Price    : {{.Price}}</li>
+        </ul>
+    </a>
+    {{end}}
+</body>
+</html>
